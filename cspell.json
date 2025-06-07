@@ -1,0 +1,9 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": ["tailwind" ,"@tailwind" , "reportWebvitals", "TTFB", "supabase",],
+    "ignoreWords": ["tailwind", "variants", "utilities"],
+    "import": []
+}
