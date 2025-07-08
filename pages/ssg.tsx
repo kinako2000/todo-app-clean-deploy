@@ -85,9 +85,3 @@ const Ssg: NextPage<StaticProps> = ({ tasks, notices }) => {
 }
   export default Ssg
 
-
-  /**
-   * tasks: tasks ?? [],
-      notices: notices ?? [],
-   * 
-   */

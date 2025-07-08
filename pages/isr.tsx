@@ -82,23 +82,3 @@ const Isr: NextPage<StaticProps> = ({ tasks, notices } ) => {
 export default Isr
 
 
-/*{Array.isArray(tasks) &&
-    tasks.map((task) => {
-    return (
-        <li key={task.id}>
-        <p className="text-lg font-extrabold">{task.title}</p>
-        </li>
-    )
-    })}
-
-{Array.isArray(notices) &&
-            notices.map((notice) => {
-            return (
-            <li key={notice.id}>
-                <p className="text-lg font-extrabold">{notice.content}</p>
-            </li>
-            )
-        })}
-
-
-    */
