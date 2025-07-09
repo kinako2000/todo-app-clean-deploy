@@ -48,39 +48,43 @@ const Ssg: NextPage<StaticProps> = ({ tasks, notices }) => {
   const router = useRouter()
   return (
     <Layout title="SSG">
-      <p className="mb-3 text-blue-500">SSG</p>
-      <ul className="mb-3">
-        {tasks?.length > 0 ? (
-        tasks.map((task) => (
-            <li key={task.id}>
-              <p className="text-lg font-extrabold">{task.title}</p>
-            </li>
-        ))
-      ) : (
-          <li>No tasks available</li>)
-        }
+            <p className="mb-3 text-pink-500">SSG</p>
+                <ul className="mb-3">
+                    {tasks.map((task) => {
+                    return (
+                        <li key={task.id}>
+                            <p className="text-lg font-extrabold">{task.title}</p>
+                        </li>
+                    )
+                    })}
+                </ul>
+                <ul className="mb-3">
+                    {notices.map((notice ) => {
+                    return (
+                        <li key={notice.id}>
+                            <p className="text-lg font-extrabold">{notice.content}</p>
+                        </li>
+                    )
+                    })}
+                </ul>
+                <Link href="/ssg" prefetch={ false }>
+                    <a className="my-3 text=xs">Link to ssg</a>
+                </Link>
 
-      </ul>
-      <ul className="mb-3">
-        {notices?.length > 0 ? (
-    notices.map((notice) => (
-      <li key={notice.id}>
-          <p className="text-lg font-extrabold">{notice.content}</p>
-      </li>
-      ))
-  ) : (
-      <li>No notices available</li>
-  )}
-      </ul>
+                <Link href="/isr" prefetch={ false }>
+                    <a className="mb-3 text=xs">Link to isr</a>
+                </Link>
 
-    <Link href="/ssr" prefetch={ false }>
-    <a className="my-3 text-xs">Link to ssr</a>
-    </Link>
+                <button className='mb-3 text=xs' onClick={() => router.push("/ssg")}>
+                    Route to ssg
+                </button>
 
-    <button className='mb-3 text-xs' onClick={() => router.push("/ssr")}>
-    Route to ssr
-    </button>
-      </Layout>
+                <button className='mb-3 text=xs' onClick={() => router.push("/ssr")}>
+                    Route to ssr
+                </button>
+
+            </Layout>
+
   )
 }
   export default Ssg
